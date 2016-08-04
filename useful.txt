@@ -51,12 +51,4 @@ git archive rev > file 	Export snapshot of revision to file
 
 Tags: 	
 git tag name [revision] 	Create tag for a given revision
-      -s 	Sign tag with your private key using GPG
-      -l [pattern] 	List tags, optionally matching pattern
-File status flags: 	
-M modified 	File has been modified
-C copy-edit 	File has been copied and modified
-R rename-edit 	File has been renamed and modified
-A added 	File has been added
-D deleted 	File has been deleted
-U unmerged 	File has conflicts after a merge 
+      -s 	Sign tag with your private key using 
