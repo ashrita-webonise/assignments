@@ -1,0 +1,16 @@
+Algorithm for the assignment of programming language
+
+Step 1:	Take the inputs through command line arguments (reason to do this is that through command line we 	can list as many as items as we want also we can easily access it through argv[], also certain test 	cases can be handled easily through this method.)
+
+Step 2:	Using fgets() split the comma seperated values and store them in a structure ( So that we can 		access that we can access the id,price and item individually.)
+
+Step 3:	Check if the items input has same id or not
+	
+	
+Step 4:	If id is same then add price of all the items listed	
+		do this for all ids where the items exist
+		calculate all the sums where items are present and print the smallest
+
+
+Step 5:	Else ids are not same print menu does not exist
+
