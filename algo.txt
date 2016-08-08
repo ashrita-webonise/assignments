@@ -1,0 +1,23 @@
+Algorithm using OOPS approach
+
+
+Step 1: form two classes restaurant and Item with the following attributes:-
+
+	restaurant	Item
+	id		itemname
+	menu		price
+	list of items
+
+Step 2:	Store the comma seperated parsed data into a hash map in which restaurant id is the key and 		itemname is the value. 
+
+Step 3:	Store the user input in an array (which is a list of user required itemname).
+
+Step 4:	Check the existance of all the items in the same restaurant by checking the itemname in item 		class by string comparision between user inputs and itemname, set flags for each item that is 		found.
+	
+Step 5:	If all the flags are set, return the restaurant id and its total sum price.
+	Similarly iterate through each restaurant and return the sum and id of the restaurant.
+	Out of all the ids that are returned compare and find the least sum price.
+
+Step 6:	If no price is returned that means all flags are not set. The user input itemnames do not exist 	in a particular restaurant print the a message saying the items do not exist in one particular 		restaurant.
+
+Step 7:	If a sum total is returned then print the restaurant id and minimum sum. 
