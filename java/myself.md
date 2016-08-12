@@ -12,5 +12,12 @@ what is beautiful is marvelous
 
 
 all i need is rythm divin
+i am happy and awesome ~!!
+
 hello i am ash
+
+i am happy and awesome ~!!
+
+make it happen this time
+
 
