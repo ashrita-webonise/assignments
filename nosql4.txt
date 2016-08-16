@@ -1,0 +1,62 @@
+db.createUser(
+	{ user:"editor", 
+	  pwd:"set_editor_password", 
+	  roles:[
+		{role:"edit.NOSQL", 
+		 db:"editor"}
+		]
+	})
+{
+	_id: 'USER_ID',
+   	username: 'string',
+	
+
+	post_id:'post_id',
+	description: 'POST_DESCRIPTION,
+	
+	
+	comments_state: 'set_state_enabled',
+	comments: [	
+      	{
+         user:'COMMENT_BY',
+         message: TEXT,
+         dateCreated: 'DATE',
+         like: LIKES 
+      	},
+	
+}
+
+{
+	db.NOSQL.update({_id: 'USER_ID',
+   	username: 'string',
+	
+
+	post_id:'post_id',
+	description: 'POST_DESCRIPTION,
+	
+	
+	comments: [	
+      	{
+         user:'COMMENT_BY',
+         message: TEXT,
+         dateCreated: 'DATE',
+         like: LIKES 
+      	},
+	
+	]}
+     
+	,{$set:{
+	_id: 'USER_ID',
+   
+	post_id:'post_id',
+	description: 'new_POST_DESCRIPTION,
+	
+
+	comments: [	
+      	{
+         message: 'newTEXT', 
+      	}]
+	}}
+	)
+}
+>db.NOSQL.find()

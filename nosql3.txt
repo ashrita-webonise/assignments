@@ -1,0 +1,50 @@
+db.createUser(
+	{ user:"superadmin", 
+	  pwd:"set_superadmin_password", 
+	  roles:[
+		{role:"root", 
+		 db:"superadmin"}
+		]
+	})
+{
+	_id: USER_ID,
+   	username: 'string',
+	login: 'state_enabled',
+	
+
+	post_id:'post_id',
+	post_id_state:'Set_state_enabled',
+	
+	
+	comments_state: 'set_state_enabled',
+	
+	superadmin_permissions: 'set_superadmin_permission_enabled',
+	superadmin_access: 'db_superadmin_password',
+
+	admin_permissions: 'set_admin_permission_enabled',
+	admin_access: 'db_admin_password',
+	
+	editor_permissions:'set_editor_permission_enabled',
+	admin_access: 'db_editor_password'
+}
+
+{
+	db.NOSQL.update({_id: USER_ID,
+   	username: 'string',
+	login: 'state_enabled',
+	post_id:'post_id',
+	post_id_state:	'Set_state_enabled',
+	comments_state: 'set_state_enabled'
+	}
+     
+	,{$set:{_id: USER_ID,
+   	
+	login: 'state_disabled',
+	
+	post_id:'post_id',
+	post_id_state:'Set_state_disabled',
+	
+	comments_state: 'set_state_disabled',
+	})
+}
+>db.NOSQL.find()

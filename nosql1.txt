@@ -1,0 +1,68 @@
+use NOSQL;
+
+{
+   _id: USER_ID
+   username: 'string',
+   login: 'state_enabled'
+   profile: [
+	{
+	   profile_picture: 'photo.jpg',
+	   gender: 'state_gender',
+	   email_id: 'string@pattern.ext',
+	   password: 'alphanumeric',
+	   check_in: 'set_location'
+	}
+   ]
+   post_id:'post_id',
+   post_id:'Set_state_enabled',
+   description: POST_DESCRIPTION,
+   by: 'user',
+   tags: [user1, user2, user3],
+   post_pictures: 'post_add_picture.jpg',
+   likes: TOTAL_LIKES,
+
+	comments_state: 'set_state_enabled', 
+	comments: [	
+      {
+         user:'COMMENT_BY',
+         message: TEXT,
+         dateCreated: 'DATE',
+         like: LIKES 
+      },
+      {
+         user:'COMMENT_BY',
+         reply_message: TEXT,
+         dateCreated: 'DATE',
+         like: LIKES
+      }
+   ]
+   timeline: 'set_post_view_by(latest_first)'
+}
+
+
+
+{
+	db.NOSQL.update({profile: [
+	{
+	   profile_picture: 'photo.jpg',
+	   gender: 'state_gender',
+	   email_id: 'string@pattern.ext',
+	   password: 'alphanumeric',
+	   check_in: 'set_location'
+	}
+     ]
+},{$set:{profile: [
+	{
+	   profile_picture: 'newphoto.jpg',
+	   gender: 'newstate_gender',
+	   email_id: 'newstring@pattern.ext',
+	   password: 'newalphanumeric',
+	   check_in: 'newset_location'
+	}
+     ]
+  }
+ )
+}
+>db.NOSQL.find()
+	
+
