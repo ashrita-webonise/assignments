@@ -1,0 +1,18 @@
+Steps to rebase our branches
+
+Consider we have a branch feature1 which we have to rebase with develop.
+	
+	That is all the commits on develop branch have to be rebased onto feature1 branch.
+doing it the other way around is a bad practice as it will raise a problem to other developers on other features.
+
+
+so first get the changes from develop
+git checkout fearute1 (ensure you are on your feature branch)
+git rebase develop
+git add <file/foldername>
+git status (run this command regularly to track your activities)
+git commit -m "write an appropriate message to caption the commit"
+git push origin feature1
+ (this command will push changes on remote feature1 branch)
+now create a pull request to develop branch on github
+
