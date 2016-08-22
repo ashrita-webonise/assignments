@@ -1,0 +1,20 @@
+function itemsetter(storage) {
+    
+	
+	storage.setItem('myhome', 'Belgaum');
+	
+
+	console.log(storage.getItem('myhome'));
+
+	console.log(storage.removeItem('myhome'));
+
+	console.log(storage.length);
+    
+    	storage.clear();
+			
+
+}
+
+itemsetter(sessionStorage);
+itemsetter(localStorage);
+    
